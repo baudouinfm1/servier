@@ -11,7 +11,7 @@ from src.config import (
 )
 from src.utils import (
     read_csv,
-    read_json
+    read_json_with_yaml
 )
 
 import pandas as pd
@@ -35,7 +35,7 @@ def preprocess_pubmed_json():
     :returns: a dataframe with clean data on pubmed
     :rtype: pandas.DataFrame
     """
-    pubmed_df = read_json(PUBMED_JSON_FILE_PATH)
+    pubmed_df = read_json_with_yaml(PUBMED_JSON_FILE_PATH)
 
     pubmed_df['title'] = pubmed_df['title'].str.lower()
 

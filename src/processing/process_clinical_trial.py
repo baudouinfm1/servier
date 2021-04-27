@@ -7,12 +7,13 @@ sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/serv
 
 from src.utils import (
     read_csv,
-    find_drugs_in_title,
     OutputGraph
 )
+from src.processing.utils import find_drugs_in_title
 from src.config import (
     PREPROCESSED_CLINICAL_TRIALS_FILE_PATH,
-    PREPROCESSED_DRUGS_FILE_PATH
+    PREPROCESSED_DRUGS_FILE_PATH,
+    PROCESSED_CLINICAL_TRIALS_FILE_PATH
 )
 
 
@@ -36,7 +37,7 @@ def main():
     output_graph = OutputGraph()
 
     process_clinical_trial(output_graph)
-    output_graph.save_to_json('data/processed_clinical_trials.json')
+    output_graph.save_to_json(PROCESSED_CLINICAL_TRIALS_FILE_PATH)
 
 
 if __name__ == "__main__":

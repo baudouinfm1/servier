@@ -12,24 +12,15 @@ def read_csv(path_to_csv):
     return df
 
 
-def read_json(path_to_json):
+def read_json_with_yaml(path_to_json):
     data = yaml.load(open(path_to_json))
     df = pd.DataFrame(data)
     return df
 
 
-def find_drugs_in_title(title, drugs_list):
-    """
-    Finds all the drugs in the title and returns them as a list
-    """
-    drugs_found = []
-
-    title_words = title.split()
-    for word in title_words:
-        if word in drugs_list:
-            drugs_found.append(word)
-    
-    return list(set(drugs_found))
+def read_json(path_to_json):
+    data = json.load(open(path_to_json))
+    return data
 
 
 class OutputGraph:
@@ -37,8 +28,8 @@ class OutputGraph:
     Class implementing the output graph
     """
 
-    def __init__(self):
-        self.drugs_graph = {}
+    def __init__(self, drugs_graph={}):
+        self.drugs_graph = drugs_graph
 
 
     def add_pubmed(self, drug, pubmed_id, pubmed_date):

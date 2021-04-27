@@ -7,12 +7,13 @@ sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/serv
 
 from src.utils import (
     read_csv,
-    find_drugs_in_title,
     OutputGraph
 )
+from src.processing.utils import find_drugs_in_title
 from src.config import (
     PREPROCESSED_PUBMED_FILEPATH,
-    PREPROCESSED_DRUGS_FILE_PATH
+    PREPROCESSED_DRUGS_FILE_PATH,
+    PROCESSED_PUBMED_FILEPATH
 )
 
 
@@ -36,7 +37,7 @@ def main():
     output_graph = OutputGraph()
 
     process_pubmed(output_graph)
-    output_graph.save_to_json('data/processed_pubmed.json')
+    output_graph.save_to_json(PROCESSED_PUBMED_FILEPATH)
 
 
 if __name__ == "__main__":
