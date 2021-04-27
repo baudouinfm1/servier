@@ -19,6 +19,11 @@ def preprocess_clinical_trials():
     """
     clinical_trials_df = read_csv(CLINICAL_TRIALS_INPUT_FILE_PATH)
     clinical_trials_df['scientific_title'] = clinical_trials_df['scientific_title'].str.lower()
+
+    # Remove byte-like characters
+    clinical_trials_df['scientific_title'] = clinical_trials_df['scientific_title'].apply(lambda x: x.replace('\\xc3', ''). replace('\\xb1', ''))
+    clinical_trials_df['journal'] = clinical_trials_df['journal'].astype(str).apply(lambda x: x.replace('\\xc3', ''). replace('\\x28', ''))
+
     return clinical_trials_df
 
 
