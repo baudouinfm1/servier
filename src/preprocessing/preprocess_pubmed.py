@@ -2,8 +2,6 @@
 Step responsible for the preprocessing of the pubmed file
 """
 
-import sys
-sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/servier/servier')
 from src.config import (
     PUBMED_CSV_FILE_PATH,
     PUBMED_JSON_FILE_PATH,

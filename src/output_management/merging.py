@@ -2,9 +2,6 @@
 Last step: responsible for the merging of the processed files
 """
 
-import sys
-sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/servier/servier')
-
 from src.utils import (
     read_json,
     OutputGraph

@@ -1,8 +1,7 @@
 """
 Step responsible for the preprocessing of the drugs file
 """
-import sys
-sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/servier/servier')
+
 from src.config import (
     DRUGS_INPUT_FILE_PATH,
     PREPROCESSED_DRUGS_FILE_PATH

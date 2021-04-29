@@ -2,8 +2,6 @@
 Step responsible for the preprocessing of the clinical trials file
 """
 
-import sys
-sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/servier/servier')
 from src.config import (
     CLINICAL_TRIALS_INPUT_FILE_PATH,
     PREPROCESSED_CLINICAL_TRIALS_FILE_PATH

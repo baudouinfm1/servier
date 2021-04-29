@@ -2,8 +2,6 @@
 Step responsible for the processing of the clinical trial file
 """
 
-import sys
-sys.path.append('/Users/baudouinfauchier-magnan/Documents/notilus/prospects/servier/servier')
 
 from src.utils import (
     read_csv,
