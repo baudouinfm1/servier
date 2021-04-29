@@ -32,5 +32,6 @@ to manually run the dag. You can also go to http://localhost:8080 and log in wit
 
 * Implement all the tests (in a `tests` folder for example)
 * Add the docstrings for all the functions
+* Work with docker!
 * Add a documentation with Sphinx for example
 * Implement a CI/CD pipeline
